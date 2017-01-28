@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+
+  ircd:
+    image: inspircd/inspircd-docker
+    container_name: ircd
+    ports:
+      - "6667:6667"
+      - "6697:6697"
+
+    restart: unless-stopped
+    privileged: false
+    stdin_open: false
+    tty: false
+
